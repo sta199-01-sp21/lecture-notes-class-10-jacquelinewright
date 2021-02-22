@@ -49,17 +49,17 @@ xtabs(~ Treatment + Improved, data = Arthritis) %>%
 ```
 
 - How many patients were enrolled in the clinical trial?
-
+84 patients
 - What is the probability a randomly selected patient received the placebo?
-
+43/84 = 52%
 - What is the probability a randomly selected patient received the placebo
   and had a marked improvement?
-  
+  7/84
 - What is the probability a randomly selected patient received the placebo
   and the treatment?
-  
-- What is the probability a randomly selected patient had some improvement or
-  was on the treatment?
+  0% because not possible
+- What is the probability a randomly selected patient had some improvement or was on the treatment?
+48/84
 
 ## Using computer simulations to calculate probabilities
 
@@ -75,7 +75,8 @@ marbles <- c("red", "red", "white", "red", "blue", "blue", "red", "blue")
 Suppose we draw a single marble from our imaginary box, where all the marbles
 are equally likely to be selected. What is the probability the marble is blue? 
 How about white?
-
+3/8 is blue
+1/8 is white
 We can simulate this "drawing" with the `sample()` function.
 
 ```{r sample}
@@ -101,6 +102,7 @@ prop.table(counts)
 ```
 
 How close is this value to the "true" probability?
+it is very close because originally it was .125
 
 **To summarize our process:**
 
